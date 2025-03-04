@@ -59,7 +59,6 @@ header > p {
     margin: auto;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
 }
-}
 
 /* Navbar */
 nav {
@@ -106,13 +105,28 @@ main h2 {
     color: var(--cor3);
 }
 
+main  p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
 main img {
     width: 100%;
     border-radius: 5px;
 }
 
 main img.pequeno {
-    width: 50%;
+    max-width: 350px;
     display: block;
     margin: auto;
 }
