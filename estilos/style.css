@@ -210,3 +210,90 @@ footer a:hover {
     text-decoration: underline;
     color: var(--cor1);
 }
+
+// ...existing code...
+
+/* Modo escuro — ativar com <html data-theme="dark"> ou <body class="dark"> */
+:root[data-theme="dark"],
+.dark {
+    --cor0: #d9efe6; /* texto claro */
+    --cor1: #2b5a63; /* links / destaques */
+    --cor2: #2fa46a; /* acentos */
+    --cor3: #186144; /* gradiente */
+    --cor4: #9fe7c9; /* destaque */
+    --cor5: #071012; /* fundo escuro */
+}
+
+/* transições suaves ao alternar tema */
+body, header, nav, main, aside, footer, a, p, h1, h2 {
+    transition: background-color .25s ease, color .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+
+/* ajustes gerais do modo escuro */
+html[data-theme="dark"] body,
+body.dark {
+    background-color: var(--cor5);
+    color: var(--cor0);
+}
+
+html[data-theme="dark"] header,
+body.dark header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+}
+
+html[data-theme="dark"] nav,
+body.dark nav {
+    background-color: rgba(0,0,0,0.45);
+}
+
+html[data-theme="dark"] main,
+body.dark main {
+    background-color: #071114;
+    color: var(--cor0);
+    box-shadow: 0 0 14px rgba(0,0,0,0.6);
+}
+
+html[data-theme="dark"] aside,
+body.dark aside {
+    background-color: #123b3a;
+    color: var(--cor0);
+}
+
+html[data-theme="dark"] footer,
+body.dark footer {
+    background-color: var(--cor5);
+    color: var(--cor0);
+}
+
+html[data-theme="dark"] a,
+body.dark a {
+    color: var(--cor2);
+    background-color: transparent;
+}
+
+html[data-theme="dark"] nav a,
+body.dark nav a {
+    color: var(--cor1);
+}
+
+html[data-theme="dark"] main a {
+    color: var(--cor0);
+    background-color: rgba(47,164,106,0.12);
+}
+
+html[data-theme="dark"] main a:hover {
+    color: var(--cor2);
+}
+
+html[data-theme="dark"] main img,
+body.dark main img {
+    filter: brightness(.92) contrast(.95);
+}
+
+/* legibilidade dos parágrafos no modo escuro */
+html[data-theme="dark"] main p,
+body.dark main p {
+    color: #d9efe6;
+}
+
+/* fim do modo escuro */
